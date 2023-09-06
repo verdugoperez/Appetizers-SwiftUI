@@ -17,6 +17,8 @@
 		83110D022AA8E5E2006BB2F2 /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83110D012AA8E5E2006BB2F2 /* OrderView.swift */; };
 		83110D042AA8E60D006BB2F2 /* AppetizersTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83110D032AA8E60D006BB2F2 /* AppetizersTabView.swift */; };
 		83110D072AA8EC9C006BB2F2 /* Appetizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83110D062AA8EC9C006BB2F2 /* Appetizer.swift */; };
+		83110D0A2AA8F0CF006BB2F2 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83110D092AA8F0CF006BB2F2 /* RequestManager.swift */; };
+		83110D0C2AA8FA23006BB2F2 /* RequestAppetizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83110D0B2AA8FA23006BB2F2 /* RequestAppetizer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		83110D012AA8E5E2006BB2F2 /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
 		83110D032AA8E60D006BB2F2 /* AppetizersTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizersTabView.swift; sourceTree = "<group>"; };
 		83110D062AA8EC9C006BB2F2 /* Appetizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appetizer.swift; sourceTree = "<group>"; };
+		83110D092AA8F0CF006BB2F2 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
+		83110D0B2AA8FA23006BB2F2 /* RequestAppetizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestAppetizer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,7 @@
 				83110CEC2AA8DEDB006BB2F2 /* Appetizers_SwfitUIApp.swift */,
 				83110CF02AA8DEDB006BB2F2 /* Assets.xcassets */,
 				83110CF22AA8DEDB006BB2F2 /* Preview Content */,
+				83110D092AA8F0CF006BB2F2 /* RequestManager.swift */,
 			);
 			path = "Appetizers-SwfitUI";
 			sourceTree = "<group>";
@@ -105,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				83110D062AA8EC9C006BB2F2 /* Appetizer.swift */,
+				83110D0B2AA8FA23006BB2F2 /* RequestAppetizer.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -185,6 +191,8 @@
 				83110CED2AA8DEDB006BB2F2 /* Appetizers_SwfitUIApp.swift in Sources */,
 				83110D022AA8E5E2006BB2F2 /* OrderView.swift in Sources */,
 				83110D042AA8E60D006BB2F2 /* AppetizersTabView.swift in Sources */,
+				83110D0A2AA8F0CF006BB2F2 /* RequestManager.swift in Sources */,
+				83110D0C2AA8FA23006BB2F2 /* RequestAppetizer.swift in Sources */,
 				83110CFD2AA8E454006BB2F2 /* Constants.swift in Sources */,
 				83110D002AA8E5BC006BB2F2 /* AccountView.swift in Sources */,
 			);

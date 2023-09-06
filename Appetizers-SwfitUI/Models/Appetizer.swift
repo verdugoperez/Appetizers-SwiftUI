@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Appetizer {
+struct Appetizer: Decodable {
     let id: Int
     let imageURL: String
     let calories: Int
