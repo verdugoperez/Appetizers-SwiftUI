@@ -16,6 +16,7 @@
 		83110D002AA8E5BC006BB2F2 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83110CFF2AA8E5BC006BB2F2 /* AccountView.swift */; };
 		83110D022AA8E5E2006BB2F2 /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83110D012AA8E5E2006BB2F2 /* OrderView.swift */; };
 		83110D042AA8E60D006BB2F2 /* AppetizersTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83110D032AA8E60D006BB2F2 /* AppetizersTabView.swift */; };
+		83110D072AA8EC9C006BB2F2 /* Appetizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83110D062AA8EC9C006BB2F2 /* Appetizer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		83110CFF2AA8E5BC006BB2F2 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		83110D012AA8E5E2006BB2F2 /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
 		83110D032AA8E60D006BB2F2 /* AppetizersTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizersTabView.swift; sourceTree = "<group>"; };
+		83110D062AA8EC9C006BB2F2 /* Appetizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appetizer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 			children = (
 				83110D052AA8E63C006BB2F2 /* Utils */,
 				83110CFE2AA8E52F006BB2F2 /* Screens */,
+				83110D082AA8ECC1006BB2F2 /* Models */,
 				83110CEE2AA8DEDB006BB2F2 /* AppetizersApp.swift */,
 				83110CEC2AA8DEDB006BB2F2 /* Appetizers_SwfitUIApp.swift */,
 				83110CF02AA8DEDB006BB2F2 /* Assets.xcassets */,
@@ -96,6 +99,14 @@
 				83110CFC2AA8E454006BB2F2 /* Constants.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		83110D082AA8ECC1006BB2F2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				83110D062AA8EC9C006BB2F2 /* Appetizer.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,6 +181,7 @@
 			files = (
 				83110CFB2AA8E120006BB2F2 /* AppetizersListView.swift in Sources */,
 				83110CEF2AA8DEDB006BB2F2 /* AppetizersApp.swift in Sources */,
+				83110D072AA8EC9C006BB2F2 /* Appetizer.swift in Sources */,
 				83110CED2AA8DEDB006BB2F2 /* Appetizers_SwfitUIApp.swift in Sources */,
 				83110D022AA8E5E2006BB2F2 /* OrderView.swift in Sources */,
 				83110D042AA8E60D006BB2F2 /* AppetizersTabView.swift in Sources */,
