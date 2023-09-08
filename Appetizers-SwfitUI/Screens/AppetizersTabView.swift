@@ -8,22 +8,15 @@
 import SwiftUI
 
 struct AppetizersTabView: View {
-    @State var appetizers = [Appetizer]()
+    @ObservedObject var viewModel = AppetizersListViewModel()
     
     var body: some View {
         TabView {
-            AppetizersListView(appetizers: appetizers).tabItem {
+            AppetizersListView(appetizers: viewModel.appetizers).tabItem {
                 Label("Home", systemImage: "house.fill")
             }.onAppear {
-                let requestManager = RequestManager()
-                guard let url = URL(string: "https://seanallen-course-backend.herokuapp.com/swiftui-fundamentals/appetizers") else { return }
-                
                 Task {
-                    let data = try await requestManager.makeNetworkRequest(url: url)
-                    let requestAppetizer = try requestManager.decodeData(RequestAppetizer.self, from: data)
-                    
-                    appetizers = requestAppetizer.request
-                    
+                    await viewModel.getAppetizers()
                 }
             }
             AccountView().tabItem {
@@ -32,7 +25,7 @@ struct AppetizersTabView: View {
             OrderView().tabItem {
                 Label("Order", systemImage: "bag.fill")
             }
-        }.accentColor(Colors.brandPrimary)
+        }.accentColor(Colors.brandPrimary).alert(Text(viewModel.errorMesage ?? ""), isPresented: $viewModel.showError) {}
     }
 }
 
