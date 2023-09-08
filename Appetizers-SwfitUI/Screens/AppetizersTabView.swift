@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct AppetizersTabView: View {
+    @State var appetizers = [Appetizer]()
+    
     var body: some View {
         TabView {
-            AppetizersListView().tabItem {
+            AppetizersListView(appetizers: appetizers).tabItem {
                 Label("Home", systemImage: "house.fill")
             }.onAppear {
                 let requestManager = RequestManager()
@@ -18,7 +20,9 @@ struct AppetizersTabView: View {
                 
                 Task {
                     let data = try await requestManager.makeNetworkRequest(url: url)
-                    let appetizers = try requestManager.decodeData(RequestAppetizer.self, from: data)
+                    let requestAppetizer = try requestManager.decodeData(RequestAppetizer.self, from: data)
+                    
+                    appetizers = requestAppetizer.request
                     
                 }
             }

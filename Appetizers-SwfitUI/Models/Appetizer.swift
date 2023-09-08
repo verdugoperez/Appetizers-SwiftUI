@@ -7,13 +7,13 @@
 
 import Foundation
 
-struct Appetizer: Decodable {
+struct Appetizer: Identifiable, Decodable {
     let id: Int
     let imageURL: String
     let calories: Int
     let name: String
     let protein: Int
     let description: String
-    let price: Double
+    let price: Decimal
     let carbs: Int
 }
