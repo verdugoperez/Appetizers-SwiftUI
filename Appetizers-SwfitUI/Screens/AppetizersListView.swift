@@ -11,27 +11,25 @@ struct AppetizersListView: View {
     let appetizers: [Appetizer]
     var body: some View {
         NavigationView {
-            ScrollView {
-                LazyVStack(alignment: .leading) {
-                    ForEach(appetizers) { appetizer in
-                        HStack {
-                            AsyncImage(url: URL(string: appetizer.imageURL)) { image in
-                                image
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fill)
-                            } placeholder: {
-                                Color.gray
-                            }
-                            .frame(width: 140, height: 110).cornerRadius(10).padding(.trailing, 12).padding(.leading, 16)
-                            VStack(alignment: .leading) {
-                                Text(appetizer.name).font(.system(size: 14, weight: .medium)).padding(.bottom, 2)
-                                Text(formattedPrice(price:appetizer.price)).font(.subheadline).foregroundColor(.gray)
-                            }
+            List(appetizers) { appetizer in
+                VStack(alignment: .leading) {
+                    HStack {
+                        AsyncImage(url: URL(string: appetizer.imageURL)) { image in
+                            image
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                        } placeholder: {
+                            Color.gray
                         }
-                        Divider()
+                        .frame(width: 140, height: 110).cornerRadius(10).padding(.trailing, 12)
+                        VStack(alignment: .leading) {
+                            Text(appetizer.name).font(.system(size: 14, weight: .medium)).padding(.bottom, 2)
+                            Text(formattedPrice(price:appetizer.price)).font(.subheadline).foregroundColor(.gray)
+                        }
                     }
-                }.navigationTitle("🍟 Appetizers")
-            }
+                    Divider()
+                }.listRowSeparator(.hidden)
+            }.navigationTitle("🍟 Appetizers")
         }
     }
     
