@@ -22,6 +22,7 @@
 		835956AF2AABDCB0009F6F48 /* AppetizersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835956AE2AABDCB0009F6F48 /* AppetizersListViewModel.swift */; };
 		835956B22AABDD16009F6F48 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835956B12AABDD16009F6F48 /* NetworkManager.swift */; };
 		83CA60622AB1203D00177953 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CA60612AB1203D00177953 /* ActivityIndicator.swift */; };
+		83CA60642AB1287400177953 /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CA60632AB1287400177953 /* RemoteImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		835956AE2AABDCB0009F6F48 /* AppetizersListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizersListViewModel.swift; sourceTree = "<group>"; };
 		835956B12AABDD16009F6F48 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		83CA60612AB1203D00177953 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		83CA60632AB1287400177953 /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				83110D012AA8E5E2006BB2F2 /* OrderView.swift */,
 				83110D032AA8E60D006BB2F2 /* AppetizersTabView.swift */,
 				83CA60612AB1203D00177953 /* ActivityIndicator.swift */,
+				83CA60632AB1287400177953 /* RemoteImage.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 				83110D022AA8E5E2006BB2F2 /* OrderView.swift in Sources */,
 				83110D042AA8E60D006BB2F2 /* AppetizersTabView.swift in Sources */,
 				83110D0A2AA8F0CF006BB2F2 /* RequestManager.swift in Sources */,
+				83CA60642AB1287400177953 /* RemoteImage.swift in Sources */,
 				83110D0C2AA8FA23006BB2F2 /* RequestAppetizer.swift in Sources */,
 				83110CFD2AA8E454006BB2F2 /* Constants.swift in Sources */,
 				835956AF2AABDCB0009F6F48 /* AppetizersListViewModel.swift in Sources */,

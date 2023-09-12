@@ -16,13 +16,7 @@ struct AppetizersListView: View {
                 List(viewModel.appetizers) { appetizer in
                     VStack(alignment: .leading) {
                         HStack {
-                            AsyncImage(url: URL(string: appetizer.imageURL)) { image in
-                                image
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fill)
-                            } placeholder: {
-                                Color.gray
-                            }
+                            AppetizerRemoteImage(urlString: appetizer.imageURL)
                             .frame(width: 140, height: 110).cornerRadius(10).padding(.trailing, 12)
                             VStack(alignment: .leading) {
                                 Text(appetizer.name).font(.system(size: 14, weight: .medium)).padding(.bottom, 2)
