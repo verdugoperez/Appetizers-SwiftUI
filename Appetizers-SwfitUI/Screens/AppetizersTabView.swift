@@ -8,16 +8,12 @@
 import SwiftUI
 
 struct AppetizersTabView: View {
-    @ObservedObject var viewModel = AppetizersListViewModel()
+    
     
     var body: some View {
         TabView {
-            AppetizersListView(appetizers: viewModel.appetizers).tabItem {
+            AppetizersListView().tabItem {
                 Label("Home", systemImage: "house.fill")
-            }.onAppear {
-                Task {
-                    await viewModel.getAppetizers()
-                }
             }
             AccountView().tabItem {
                 Label("Account", systemImage: "person.crop.circle.fill")
@@ -25,7 +21,7 @@ struct AppetizersTabView: View {
             OrderView().tabItem {
                 Label("Order", systemImage: "bag.fill")
             }
-        }.accentColor(Colors.brandPrimary).alert(Text(viewModel.errorMesage ?? ""), isPresented: $viewModel.showError) {}
+        }.accentColor(Colors.brandPrimary)
     }
 }
 

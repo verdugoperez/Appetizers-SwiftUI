@@ -21,6 +21,7 @@
 		83110D0C2AA8FA23006BB2F2 /* RequestAppetizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83110D0B2AA8FA23006BB2F2 /* RequestAppetizer.swift */; };
 		835956AF2AABDCB0009F6F48 /* AppetizersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835956AE2AABDCB0009F6F48 /* AppetizersListViewModel.swift */; };
 		835956B22AABDD16009F6F48 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835956B12AABDD16009F6F48 /* NetworkManager.swift */; };
+		83CA60622AB1203D00177953 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CA60612AB1203D00177953 /* ActivityIndicator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		83110D0B2AA8FA23006BB2F2 /* RequestAppetizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestAppetizer.swift; sourceTree = "<group>"; };
 		835956AE2AABDCB0009F6F48 /* AppetizersListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizersListViewModel.swift; sourceTree = "<group>"; };
 		835956B12AABDD16009F6F48 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		83CA60612AB1203D00177953 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				83110CFF2AA8E5BC006BB2F2 /* AccountView.swift */,
 				83110D012AA8E5E2006BB2F2 /* OrderView.swift */,
 				83110D032AA8E60D006BB2F2 /* AppetizersTabView.swift */,
+				83CA60612AB1203D00177953 /* ActivityIndicator.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 				83110CFB2AA8E120006BB2F2 /* AppetizersListView.swift in Sources */,
 				83110CEF2AA8DEDB006BB2F2 /* AppetizersApp.swift in Sources */,
 				83110D072AA8EC9C006BB2F2 /* Appetizer.swift in Sources */,
+				83CA60622AB1203D00177953 /* ActivityIndicator.swift in Sources */,
 				83110CED2AA8DEDB006BB2F2 /* Appetizers_SwfitUIApp.swift in Sources */,
 				83110D022AA8E5E2006BB2F2 /* OrderView.swift in Sources */,
 				83110D042AA8E60D006BB2F2 /* AppetizersTabView.swift in Sources */,

@@ -11,6 +11,7 @@ class AppetizersListViewModel: ObservableObject {
     @Published var appetizers = [Appetizer]()
     @Published var errorMesage: String?
     @Published var showError = false
+    @Published var isLoading = false
     
     private var networkManager: NetworkManager
     
@@ -24,11 +25,14 @@ class AppetizersListViewModel: ObservableObject {
     }
     
     func getAppetizers() async {
+        isLoading = true
         do {
             appetizers = try await networkManager.getAppetizersAsync()
+            isLoading = false
         } catch {
             showError = true
             errorMesage = error.localizedDescription
+            isLoading = false
         }
     }
 }
