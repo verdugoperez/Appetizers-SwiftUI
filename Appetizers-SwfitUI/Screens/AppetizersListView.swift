@@ -9,13 +9,18 @@ import SwiftUI
 
 struct AppetizersListView: View {
     @ObservedObject var viewModel = AppetizersListViewModel()
-
+    @State var selectedAppetizer: Appetizer?
+    
     var body: some View {
         ZStack {
             NavigationView {
                 List(viewModel.appetizers) { appetizer in
-                    AppetizerView(appetizer: appetizer)
-                }.navigationTitle("🍟 Appetizers")
+                    AppetizerView(appetizer: appetizer).onTapGesture {
+                        selectedAppetizer = appetizer
+                    }
+                }.navigationTitle("🍟 Appetizers").fullScreenCover(item: $selectedAppetizer) { item in
+                    AppetizerDetailView(appetizer: item)
+                }
             }.onAppear {
                 Task {
                     await viewModel.getAppetizers()

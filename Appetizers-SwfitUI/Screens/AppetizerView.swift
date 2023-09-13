@@ -17,17 +17,11 @@ struct AppetizerView: View {
                 .frame(width: 140, height: 110).cornerRadius(10).padding(.trailing, 12)
                 VStack(alignment: .leading) {
                     Text(appetizer.name).font(.system(size: 14, weight: .medium)).padding(.bottom, 2)
-                    Text(formattedPrice(price:appetizer.price)).font(.subheadline).foregroundColor(.gray)
+                    Text(appetizer.price.formattedPrice()).font(.subheadline).foregroundColor(.gray)
                 }
             }
             Divider()
         }.listRowSeparator(.hidden)
-    }
-    
-    func formattedPrice(price: Decimal) -> String {
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .currency
-        return formatter.string(from: NSDecimalNumber(decimal: price)) ?? ""
     }
 }
 
