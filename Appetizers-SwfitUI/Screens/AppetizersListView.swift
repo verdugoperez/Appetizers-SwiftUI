@@ -10,7 +10,7 @@ import SwiftUI
 struct AppetizersListView: View {
     @ObservedObject var viewModel = AppetizersListViewModel()
     @State var selectedAppetizer: Appetizer?
-    
+
     var body: some View {
         ZStack {
             NavigationView {

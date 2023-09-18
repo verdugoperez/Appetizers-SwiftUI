@@ -28,38 +28,9 @@ struct AppetizerDetailView: View {
                     .padding()
                 
                 HStack(spacing: 40) {
-                    VStack(spacing: 5) {
-                        Text("Calories")
-                            .bold()
-                            .font(.caption)
-                        
-                        Text("\(appetizer.calories)")
-                            .foregroundColor(.secondary)
-                            .fontWeight(.semibold)
-                            .italic()
-                    }
-                    
-                    VStack(spacing: 5) {
-                        Text("Carbs")
-                            .bold()
-                            .font(.caption)
-                        
-                        Text("\(appetizer.carbs)")
-                            .foregroundColor(.secondary)
-                            .fontWeight(.semibold)
-                            .italic()
-                    }
-                    
-                    VStack(spacing: 5) {
-                        Text("Protein")
-                            .bold()
-                            .font(.caption)
-                        
-                        Text("\(appetizer.protein)")
-                            .foregroundColor(.secondary)
-                            .fontWeight(.semibold)
-                            .italic()
-                    }
+                    NutritionView(title: "Calories", value: appetizer.calories)
+                    NutritionView(title: "Carbs", value: appetizer.carbs)
+                    NutritionView(title: "Protein", value: appetizer.protein)
                 }
             }
             
@@ -95,7 +66,6 @@ struct AppetizerDetailView: View {
                     .foregroundColor(.black)
             }
         }), alignment: .topTrailing)
-        
     }
 }
 
