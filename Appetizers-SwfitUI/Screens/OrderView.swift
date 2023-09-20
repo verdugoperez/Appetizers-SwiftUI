@@ -8,16 +8,16 @@
 import SwiftUI
 
 struct OrderView: View {
-    @ObservedObject var viewModel = AppetizersListViewModel()
+    @EnvironmentObject var order: Order
     
     var body: some View {
         NavigationView {
             VStack {
-                if viewModel.appetizers.isEmpty {
+                if order.items.isEmpty {
                     EmptyState(imageName: "empty-order", message: "There are no items in your order.")
                 } else {
                     List {
-                        ForEach(viewModel.appetizers) { appetizer in
+                        ForEach(order.items) { appetizer in
                             AppetizerView(appetizer: appetizer)
                         }.onDelete(perform: onDeleteOrder)
                     }.listStyle(.plain)
@@ -29,15 +29,11 @@ struct OrderView: View {
                 }
                
             }.navigationTitle("📰 Orders")
-        }.onAppear {
-            Task {
-                await viewModel.getAppetizers()
-            }
         }
     }
     
     private func onDeleteOrder(at offsets: IndexSet) {
-        viewModel.appetizers.remove(atOffsets: offsets)
+        order.items.remove(atOffsets: offsets)
     }
 }
 

@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct AppetizersApp: View {
+    
+    var order = Order()
+    
     var body: some View {
-        AppetizersTabView()
+        AppetizersTabView().environmentObject(order)
     }
 }
 
