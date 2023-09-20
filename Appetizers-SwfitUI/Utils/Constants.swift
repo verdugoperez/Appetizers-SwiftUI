@@ -9,6 +9,7 @@ import SwiftUI
 
 enum Colors {
     static let brandPrimary = Color("brandPrimary")
+    static let labelPrimary = Color("labelPrimary")
 }
 
 enum Images {
