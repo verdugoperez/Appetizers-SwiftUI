@@ -9,7 +9,7 @@ import SwiftUI
 
 struct NutritionView: View {
     let title: String
-    let value: Int
+    let value: String
     
     var body: some View {
         VStack(spacing: 5) {
@@ -17,7 +17,7 @@ struct NutritionView: View {
                 .bold()
                 .font(.caption)
             
-            Text("\(value)")
+            Text(value)
                 .foregroundColor(.secondary)
                 .fontWeight(.semibold)
                 .italic()
@@ -27,6 +27,6 @@ struct NutritionView: View {
 
 struct NutritionView_Previews: PreviewProvider {
     static var previews: some View {
-        NutritionView(title: "Carbs", value: 30)
+        NutritionView(title: "Carbs", value: "30 g")
     }
 }
