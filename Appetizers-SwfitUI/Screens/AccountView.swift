@@ -9,17 +9,38 @@ import SwiftUI
 
 struct AccountView: View {
     @StateObject var viewModel = AccountViewModel()
+    @FocusState private var focusedTextField: FormTextField?
+    
+    
+    enum FormTextField {
+        case firstName, lastName, email
+    }
     
     var body: some View {
         NavigationView {
             Form {
-                
                 Section {
                     TextField("First name", text: $viewModel.user.firstName)
+                        .focused($focusedTextField, equals: .firstName)
+                        .submitLabel(.next)
+                        .onSubmit {
+                            focusedTextField = .lastName
+                        }
                     TextField("Last name", text: $viewModel.user.lastName)
+                        .focused($focusedTextField, equals: .lastName)
+                        .submitLabel(.next)
+                        .onSubmit {
+                            focusedTextField = .email
+                        }
                     TextField("email", text: $viewModel.user.email)
+                        .textInputAutocapitalization(.never)
+                        .focused($focusedTextField, equals: .email)
                         .keyboardType(.emailAddress)
-                        .textInputAutocapitalization(.none)
+                        .submitLabel(.continue)
+                        .autocorrectionDisabled()
+                        .onSubmit {
+                            focusedTextField = nil
+                        }
                     DatePicker("Birthday", selection: $viewModel.user.birthDay, displayedComponents: .date)
                     Button {
                         viewModel.saveChanges()
@@ -37,6 +58,12 @@ struct AccountView: View {
                 } header: {
                     Text("Requests")
                 }.toggleStyle(SwitchToggleStyle(tint: Colors.brandPrimary))
+            }.toolbar {
+                ToolbarItemGroup(placement: .keyboard) {
+                    Button("Dismiss") {
+                        focusedTextField = nil
+                    }
+                }
             }.navigationTitle("😀 Account").alert(viewModel.alertItem.title, isPresented: $viewModel.alertItem.isShowing) {
                 
             } message: {
