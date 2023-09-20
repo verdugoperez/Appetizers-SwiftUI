@@ -18,10 +18,8 @@ struct AppetizersListView: View {
                     AppetizerView(appetizer: appetizer).onTapGesture {
                         selectedAppetizer = appetizer
                     }
-                }.onAppear {
-                    Task {
-                        await viewModel.getAppetizers()
-                    }
+                }.task {
+                    await viewModel.getAppetizers()
                 }.navigationTitle("🍟 Appetizers").fullScreenCover(item: $selectedAppetizer) { item in
                     AppetizerDetailView(appetizer: item)
                 }

@@ -14,7 +14,7 @@ struct AppetizerView: View {
         VStack(alignment: .leading) {
             HStack {
                 AppetizerRemoteImage(urlString: appetizer.imageURL)
-                .frame(width: 140, height: 110).cornerRadius(10).padding(.trailing, 12)
+                .frame(width: 120, height: 90).cornerRadius(10).padding(.trailing, 12)
                 VStack(alignment: .leading) {
                     Text(appetizer.name).font(.system(size: 14, weight: .medium)).padding(.bottom, 2)
                     Text(appetizer.price.formattedPrice()).font(.subheadline).foregroundColor(.gray)

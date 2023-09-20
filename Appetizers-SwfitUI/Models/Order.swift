@@ -17,6 +17,8 @@ final class Order: ObservableObject {
     }
     
     func add(_ appetizer: Appetizer) {
+        guard !items.contains(appetizer) else { return }
+        
         items.append(appetizer)
     }
     
