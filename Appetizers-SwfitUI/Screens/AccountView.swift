@@ -43,6 +43,8 @@ struct AccountView: View {
                 Text(viewModel.alertItem.message ?? "")
             }
 
+        }.onAppear {
+            viewModel.retrieveUser()
         }
     }
 }

@@ -49,6 +49,17 @@ final class AccountViewModel: ObservableObject {
             self.alertItem.message = "No se pudo guardar el usuario"
             self.alertItem.isShowing = true
         }
+    }
+    
+    func retrieveUser() {
+        guard let userData = userData else { return }
         
+        do {
+            user = try JSONDecoder().decode(User.self, from: userData)
+        } catch {
+            alertItem.title = "Error"
+            alertItem.message = "No se pudo obtener la información el usuario"
+            alertItem.isShowing = true
+        }
     }
 }
