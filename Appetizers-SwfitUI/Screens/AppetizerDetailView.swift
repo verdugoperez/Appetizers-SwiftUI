@@ -39,11 +39,7 @@ struct AppetizerDetailView: View {
             Button {
                 print("tap")
             } label: {
-                Text("\(appetizer.price.formattedPrice()) - Add to Order")
-                    .font(.title3)
-                    .fontWeight(.semibold)
-                    .frame(width: 260, height: 50)
-                    .foregroundColor(.white).background(Colors.brandPrimary).cornerRadius(10)
+                AppetizerButton(label: "\(appetizer.price.formattedPrice()) - Add to Order")
             }
             .padding(.bottom, 30)
         }

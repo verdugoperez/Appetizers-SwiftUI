@@ -8,10 +8,31 @@
 import SwiftUI
 
 struct OrderView: View {
+    @ObservedObject var viewModel = AppetizersListViewModel()
+    
     var body: some View {
         NavigationView {
-            Text("Order").navigationTitle("📰 Orders")
+            LazyVStack {
+                List {
+                    ForEach(viewModel.appetizers) { appetizer in
+                        AppetizerView(appetizer: appetizer)
+                    }.onDelete(perform: onDeleteOrder)
+                }.listStyle(.plain)
+                Button {
+                    
+                } label: {
+                   AppetizerButton(label: "$800.00 - Place order")
+                }.padding(.bottom, 16)
+            }.navigationTitle("📰 Orders")
+        }.onAppear {
+            Task {
+                await viewModel.getAppetizers()
+            }
         }
+    }
+    
+    private func onDeleteOrder(at offsets: IndexSet) {
+        viewModel.appetizers.remove(atOffsets: offsets)
     }
 }
 

@@ -19,7 +19,6 @@ class AppetizersListViewModel: ObservableObject {
         self.networkManager = networkManager
     }
     
-    
     convenience init() {
         self.init(networkManager: NetworkManager())
     }
