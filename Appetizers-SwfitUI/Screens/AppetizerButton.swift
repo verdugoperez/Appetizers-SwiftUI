@@ -9,13 +9,13 @@ import SwiftUI
 
 struct AppetizerButton: View {
     let label: String
-    
+    @Environment(\.colorScheme) private var colorScheme
     var body: some View {
         Text(label)
             .font(.title3)
             .fontWeight(.semibold)
             .frame(width: 260, height: 50)
-            .foregroundColor(.white).background(Colors.brandPrimary).cornerRadius(10)
+            .foregroundColor(Color(uiColor: colorScheme == .dark ? .black : .white)).background(Colors.brandPrimary).cornerRadius(10)
     }
 }
 
