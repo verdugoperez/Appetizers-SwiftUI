@@ -24,7 +24,7 @@ struct OrderView: View {
                     Button {
                         
                     } label: {
-                       AppetizerButton(label: "$800.00 - Place order")
+                        AppetizerButton(label: "\(order.totalPrice.formattedPrice()) - Place order")
                     }.padding(.bottom, 16)
                 }
                
@@ -33,7 +33,7 @@ struct OrderView: View {
     }
     
     private func onDeleteOrder(at offsets: IndexSet) {
-        order.items.remove(atOffsets: offsets)
+        order.remove(at: offsets)
     }
 }
 
