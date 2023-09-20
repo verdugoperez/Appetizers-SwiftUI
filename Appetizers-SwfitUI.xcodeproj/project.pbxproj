@@ -33,6 +33,7 @@
 		83BBB7632AB26683007C47EF /* Decimal+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BBB7622AB26683007C47EF /* Decimal+Extension.swift */; };
 		83CA60622AB1203D00177953 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CA60612AB1203D00177953 /* ActivityIndicator.swift */; };
 		83CA60642AB1287400177953 /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CA60632AB1287400177953 /* RemoteImage.swift */; };
+		83E9D3162ABBAE8E00765E56 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E9D3152ABBAE8E00765E56 /* Date+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		83BBB7622AB26683007C47EF /* Decimal+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decimal+Extension.swift"; sourceTree = "<group>"; };
 		83CA60612AB1203D00177953 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		83CA60632AB1287400177953 /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
+		83E9D3152ABBAE8E00765E56 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 				83110CFC2AA8E454006BB2F2 /* Constants.swift */,
 				83BBB7622AB26683007C47EF /* Decimal+Extension.swift */,
 				834AE31C2ABB54C500224E81 /* String+Extension.swift */,
+				83E9D3152ABBAE8E00765E56 /* Date+Extension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83E9D3162ABBAE8E00765E56 /* Date+Extension.swift in Sources */,
 				834AE3232ABB6EE400224E81 /* EmptyState.swift in Sources */,
 				835956B22AABDD16009F6F48 /* NetworkManager.swift in Sources */,
 				83110CFB2AA8E120006BB2F2 /* AppetizersListView.swift in Sources */,

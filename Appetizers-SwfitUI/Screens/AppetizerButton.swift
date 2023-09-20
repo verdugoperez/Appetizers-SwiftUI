@@ -15,7 +15,8 @@ struct AppetizerButton: View {
             .font(.title3)
             .fontWeight(.semibold)
             .frame(width: 260, height: 50)
-            .foregroundColor(Colors.labelPrimary).background(Colors.brandPrimary).cornerRadius(10)
+            .foregroundColor(Colors.labelPrimary).background(Colors.brandPrimary)
+            .cornerRadius(10)
     }
 }
 
