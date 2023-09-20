@@ -9,9 +9,10 @@ import SwiftUI
 
 struct AppetizerDetailView: View {
     @EnvironmentObject var order: Order
+    @Environment(\.presentationMode) var presentationMode
     
     let appetizer: Appetizer
-    @Environment(\.dismiss) var dismiss
+    
 
     var body: some View {
         VStack {
@@ -40,7 +41,7 @@ struct AppetizerDetailView: View {
             
             Button {
                 order.add(appetizer)
-                dismiss()
+                presentationMode.wrappedValue.dismiss()
             } label: {
                 AppetizerButton(label: "\(appetizer.price.formattedPrice()) - Add to Order")
             }
@@ -51,7 +52,7 @@ struct AppetizerDetailView: View {
         .cornerRadius(12)
         .shadow(radius: 40)
         .overlay(Button(action: {
-            dismiss()
+            presentationMode.wrappedValue.dismiss()
         }, label: {
             ZStack {
                 Circle()

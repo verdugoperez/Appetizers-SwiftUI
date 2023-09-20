@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AppetizersListView: View {
-    @ObservedObject var viewModel = AppetizersListViewModel()
+    @StateObject var viewModel = AppetizersListViewModel()
     @State var selectedAppetizer: Appetizer?
 
     var body: some View {
@@ -18,12 +18,12 @@ struct AppetizersListView: View {
                     AppetizerView(appetizer: appetizer).onTapGesture {
                         selectedAppetizer = appetizer
                     }
-                }.listStyle(.plain).navigationTitle("🍟 Appetizers").fullScreenCover(item: $selectedAppetizer) { item in
+                }.onAppear {
+                    Task {
+                        await viewModel.getAppetizers()
+                    }
+                }.navigationTitle("🍟 Appetizers").fullScreenCover(item: $selectedAppetizer) { item in
                     AppetizerDetailView(appetizer: item)
-                }
-            }.onAppear {
-                Task {
-                    await viewModel.getAppetizers()
                 }
             }.alert(Text(viewModel.errorMesage ?? ""), isPresented: $viewModel.showError) {}
             
