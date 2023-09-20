@@ -18,7 +18,7 @@ struct AppetizersListView: View {
                     AppetizerView(appetizer: appetizer).onTapGesture {
                         selectedAppetizer = appetizer
                     }
-                }.navigationTitle("🍟 Appetizers").fullScreenCover(item: $selectedAppetizer) { item in
+                }.listStyle(.plain).navigationTitle("🍟 Appetizers").fullScreenCover(item: $selectedAppetizer) { item in
                     AppetizerDetailView(appetizer: item)
                 }
             }.onAppear {
