@@ -12,17 +12,22 @@ struct OrderView: View {
     
     var body: some View {
         NavigationView {
-            LazyVStack {
-                List {
-                    ForEach(viewModel.appetizers) { appetizer in
-                        AppetizerView(appetizer: appetizer)
-                    }.onDelete(perform: onDeleteOrder)
-                }.listStyle(.plain)
-                Button {
-                    
-                } label: {
-                   AppetizerButton(label: "$800.00 - Place order")
-                }.padding(.bottom, 16)
+            VStack {
+                if viewModel.appetizers.isEmpty {
+                    EmptyState(imageName: "empty-order", message: "There are no items in your order.")
+                } else {
+                    List {
+                        ForEach(viewModel.appetizers) { appetizer in
+                            AppetizerView(appetizer: appetizer)
+                        }.onDelete(perform: onDeleteOrder)
+                    }.listStyle(.plain)
+                    Button {
+                        
+                    } label: {
+                       AppetizerButton(label: "$800.00 - Place order")
+                    }.padding(.bottom, 16)
+                }
+               
             }.navigationTitle("📰 Orders")
         }.onAppear {
             Task {
