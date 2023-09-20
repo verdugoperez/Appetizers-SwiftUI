@@ -8,20 +8,10 @@
 import Foundation
 
 final class Order: ObservableObject {
-    @Published private (set) var  items = [Appetizer]() {
-        didSet {
-            getTotal()
-        }
-    }
+    @Published private (set) var items = [Appetizer]()
     
-    @Published var totalPrice: Decimal = 0.0
-    
-    init() {
-        getTotal()
-    }
-    
-    private func getTotal() {
-        totalPrice = items.reduce(0.0) { partialResult, appetizer in
+    var totalPrice: Decimal {
+        items.reduce(0.0) { partialResult, appetizer in
             return partialResult + appetizer.price
         }
     }
